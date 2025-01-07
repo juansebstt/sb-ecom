@@ -1,7 +1,6 @@
 package com.ecommerce.sbecom.common.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Getter
@@ -12,4 +11,11 @@ import lombok.*;
 @Entity
 @Table(name = "categories")
 public class CategoryModel {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String categoryName;
+
 }
