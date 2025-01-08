@@ -1,5 +1,6 @@
 package com.ecommerce.sbecom.common.constant;
 
+// Class to hold constant API route variables used throughout the application
 public class ApiPathConstant {
 
     public static final String V1_ROUTE = "/v1"; // Base route for API version 1
