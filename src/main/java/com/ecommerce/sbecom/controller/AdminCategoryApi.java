@@ -1,22 +1,23 @@
 package com.ecommerce.sbecom.controller;
 
 import com.ecommerce.sbecom.common.constant.ApiPathConstant;
+import com.ecommerce.sbecom.common.dto.CategoryDTO;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RequestMapping(ApiPathConstant.V1_ROUTE + ApiPathConstant.ADMIN_ROUTE + ApiPathConstant.CATEGORY_ROUTE)
 public interface AdminCategoryApi {
 
     @PostMapping
-    ResponseEntity<?> createCategory();
+    ResponseEntity<CategoryDTO> createCategory();
 
-    @DeleteMapping
-    ResponseEntity<?> deleteCategory();
+    @PutMapping("/{id}")
+    ResponseEntity<CategoryDTO> updateCategory();
 
-    @GetMapping
-    ResponseEntity<?> getAllCategories();
+    @DeleteMapping("/{id}")
+    ResponseEntity<CategoryDTO> deleteCategory();
 
 }
