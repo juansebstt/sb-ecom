@@ -3,10 +3,7 @@ package com.ecommerce.sbecom.controller;
 import com.ecommerce.sbecom.common.constant.ApiPathConstant;
 import com.ecommerce.sbecom.common.dto.CategoryDTO;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @RequestMapping(ApiPathConstant.V1_ROUTE + ApiPathConstant.ADMIN_ROUTE + ApiPathConstant.CATEGORY_ROUTE)
 public interface AdminCategoryApi {
@@ -15,9 +12,9 @@ public interface AdminCategoryApi {
     ResponseEntity<CategoryDTO> createCategory();
 
     @PutMapping("/{id}")
-    ResponseEntity<CategoryDTO> updateCategory();
+    ResponseEntity<CategoryDTO> updateCategory(@PathVariable Long id, @RequestBody CategoryDTO categoryDTO);
 
     @DeleteMapping("/{id}")
-    ResponseEntity<CategoryDTO> deleteCategory();
+    ResponseEntity<CategoryDTO> deleteCategory(@PathVariable Long id, @RequestBody CategoryDTO categoryDTO);
 
 }
