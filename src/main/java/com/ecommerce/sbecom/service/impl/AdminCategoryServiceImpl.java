@@ -25,8 +25,8 @@ public class AdminCategoryServiceImpl implements AdminCategoryService {
                 .map(categoryRepository::save)
                 .orElseThrow(() -> new RuntimeException("Failed to save category"));
         return CategoryModel.builder()
-                .categoryId(created.getCategoryId())
+                .id(created.getId())
                 .categoryName(created.getCategoryName())
                 .build();
-
+    }
 }
