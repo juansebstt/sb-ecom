@@ -1,5 +1,6 @@
 package com.ecommerce.sbecom.service.impl;
 
+import com.ecommerce.sbecom.common.dto.CategoryDTO;
 import com.ecommerce.sbecom.common.entity.CategoryModel;
 import com.ecommerce.sbecom.repository.CategoryRepository;
 import com.ecommerce.sbecom.service.AdminCategoryService;
@@ -19,12 +20,12 @@ public class AdminCategoryServiceImpl implements AdminCategoryService {
     }
 
     @Override
-    public CategoryModel createCategory(CategoryModel categoryModel) {
-        var category = CategoryModel.builder().categoryName(categoryModel.getCategoryName()).build();
-        var created = Optional.of(category)
+    public CategoryDTO createCategory(CategoryDTO category) {
+        var categoryModel = CategoryModel.builder().categoryName(category.getCategoryName()).build();
+        var created = Optional.of(categoryModel)
                 .map(categoryRepository::save)
                 .orElseThrow(() -> new RuntimeException("Failed to save category"));
-        return CategoryModel.builder()
+        return CategoryDTO.builder()
                 .id(created.getId())
                 .categoryName(created.getCategoryName())
                 .build();
