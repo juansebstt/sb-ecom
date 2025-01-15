@@ -1,7 +1,6 @@
 package com.ecommerce.sbecom.controller.impl;
 
 import com.ecommerce.sbecom.common.dto.CategoryDTO;
-import com.ecommerce.sbecom.common.entity.CategoryModel;
 import com.ecommerce.sbecom.controller.AdminCategoryApi;
 import com.ecommerce.sbecom.service.AdminCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,8 +18,8 @@ public class AdminCategoryController implements AdminCategoryApi {
     }
 
     @Override
-    public ResponseEntity<CategoryDTO> createCategory(CategoryDTO categoryModel) {
-        return ResponseEntity.ok(adminCategoryService.createCategory(categoryModel));
+    public ResponseEntity<CategoryDTO> createCategory(CategoryDTO category) {
+        return ResponseEntity.ok(adminCategoryService.createCategory(category));
     }
 
     @Override
