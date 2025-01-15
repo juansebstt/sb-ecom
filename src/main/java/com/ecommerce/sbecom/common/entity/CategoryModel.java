@@ -18,6 +18,5 @@ public class CategoryModel {
 
     private String categoryName;
 
-    private String categoryDescription;
 
 }
