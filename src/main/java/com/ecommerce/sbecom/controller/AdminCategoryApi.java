@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 public interface AdminCategoryApi {
 
     @PostMapping
-    ResponseEntity<CategoryDTO> createCategory();
+    ResponseEntity<CategoryDTO> createCategory(@RequestBody CategoryDTO category);
 
     @PutMapping("/{id}")
     ResponseEntity<CategoryDTO> updateCategory(@PathVariable Long id, @RequestBody CategoryDTO categoryDTO);
