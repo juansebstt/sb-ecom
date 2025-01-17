@@ -10,4 +10,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CategoriesDTO {
+
+    private String pageNumber;
+
+    private String pageSize;
+
+    private String sortOrder;
+
+    private String sortBy;
+
 }
