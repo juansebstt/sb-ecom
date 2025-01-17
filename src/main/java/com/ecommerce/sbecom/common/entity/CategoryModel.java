@@ -18,5 +18,12 @@ public class CategoryModel {
 
     private String categoryName;
 
+    private String pageNumber;
+
+    private String pageSize;
+
+    private String sortOrder;
+
+    private String sortBy;
 
 }
