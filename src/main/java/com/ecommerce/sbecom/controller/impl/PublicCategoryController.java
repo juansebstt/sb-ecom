@@ -1,5 +1,6 @@
 package com.ecommerce.sbecom.controller.impl;
 
+import com.ecommerce.sbecom.common.dto.CategoriesDTO;
 import com.ecommerce.sbecom.common.entity.CategoryModel;
 import com.ecommerce.sbecom.controller.PublicCategoryApi;
 import com.ecommerce.sbecom.service.PublicCategoryService;
@@ -20,7 +21,7 @@ public class PublicCategoryController implements PublicCategoryApi {
     }
 
     @Override
-    public ResponseEntity<List<CategoryModel>> getAllCategories() {
+    public ResponseEntity<List<CategoryModel>> getAllCategories(CategoriesDTO pageNumber, CategoriesDTO pageSize, CategoriesDTO sortOrder, CategoriesDTO sortType) {
         return ResponseEntity.ok(publicCategoryService.getAllCategories());
     }
 }
