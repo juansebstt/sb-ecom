@@ -1,6 +1,6 @@
 package com.ecommerce.sbecom.service.impl;
 
-import com.ecommerce.sbecom.common.entity.CategoryModel;
+import com.ecommerce.sbecom.common.dto.CategoriesDTO;
 import com.ecommerce.sbecom.repository.CategoryRepository;
 import com.ecommerce.sbecom.service.PublicCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,9 +19,11 @@ public class PublicCategoryServiceImpl implements PublicCategoryService {
     }
 
     @Override
-    public List<CategoryModel> getAllCategories() {
+    public List<CategoriesDTO> getAllCategories() {
 
-        var categories =
+        var categories = categoryRepository.findAll()
+                .stream()
+                .filter()
 
         return List.of();
     }
