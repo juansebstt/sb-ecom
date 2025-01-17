@@ -23,8 +23,16 @@ public class PublicCategoryServiceImpl implements PublicCategoryService {
 
         var categories = categoryRepository.findAll()
                 .stream()
-                .filter()
+                .filter(category -> category.getCategoryName() != null)
+                .toList();
 
-        return List.of();
+        return categories.stream()
+                .map(category -> CategoriesDTO.builder()
+                        .pageNumber(category.getPageNumber())
+                        .pageSize(category.getPageSize())
+                        .sortOrder(category.getSortOrder())
+                        .sortBy(category.getSortBy())
+                        .build())
+                .toList();
     }
 }
