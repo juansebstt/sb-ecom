@@ -1,6 +1,7 @@
 package com.ecommerce.sbecom.controller;
 
 import com.ecommerce.sbecom.common.constant.ApiPathConstant;
+import com.ecommerce.sbecom.common.dto.CategoriesDTO;
 import com.ecommerce.sbecom.common.entity.CategoryModel;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,7 +14,9 @@ import java.util.List;
 public interface PublicCategoryApi {
 
     @GetMapping
-    ResponseEntity<List<CategoryModel>> getAllCategories(@RequestBody pageNumber, @RequestBody pageSize,
-                                                         @RequestBody sortOrder, @RequestBody sortType);
+    ResponseEntity<List<CategoryModel>> getAllCategories(@RequestBody CategoriesDTO pageNumber,
+                     @RequestBody CategoriesDTO pageSize,
+                     @RequestBody CategoriesDTO sortOrder,
+                     @RequestBody CategoriesDTO sortType);
 
 }
