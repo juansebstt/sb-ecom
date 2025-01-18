@@ -23,11 +23,10 @@ public class AdminCategoryController implements AdminCategoryApi {
         return ResponseEntity.ok(adminCategoryService.createCategory(category));
     }
 
-
     // Placeholder for handling PUT requests to update a category
     @Override
     public ResponseEntity<CategoryDTO> updateCategory(Long id, CategoryDTO categoryDTO) {
-        return null;
+        return ResponseEntity.ok(adminCategoryService.);
     }
 
     @Override
