@@ -30,4 +30,14 @@ public class AdminCategoryServiceImpl implements AdminCategoryService {
                 .categoryName(created.getCategoryName())
                 .build();
     }
+
+    @Override
+    public CategoryDTO updateCategory(CategoryDTO updateCategory) {
+        return null;
+    }
+
+    @Override
+    public CategoryDTO deleteCategory(CategoryDTO deleteCategory) {
+        return null;
+    }
 }
