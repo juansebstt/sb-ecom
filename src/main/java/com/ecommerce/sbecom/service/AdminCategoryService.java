@@ -6,4 +6,9 @@ public interface AdminCategoryService {
 
     CategoryDTO createCategory(CategoryDTO category);
 
+    CategoryDTO updateCategory(CategoryDTO updateCategory);
+
+    CategoryDTO deleteCategory(CategoryDTO deleteCategory);
+
+
 }
