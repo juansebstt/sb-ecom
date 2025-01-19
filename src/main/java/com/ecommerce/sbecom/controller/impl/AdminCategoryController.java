@@ -30,7 +30,7 @@ public class AdminCategoryController implements AdminCategoryApi {
     }
 
     @Override
-    public ResponseEntity<CategoryDTO> deleteCategory(Long id, CategoryDTO categoryDTO) {
-        return ResponseEntity.ok(adminCategoryService.deleteCategory(categoryDTO));
+    public ResponseEntity<Void> deleteCategory(Long id, CategoryDTO categoryDTO) {
+        return ResponseEntity.noContent().build();
     }
 }

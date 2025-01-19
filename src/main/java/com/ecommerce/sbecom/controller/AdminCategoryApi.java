@@ -15,6 +15,6 @@ public interface AdminCategoryApi {
     ResponseEntity<CategoryDTO> updateCategory(@PathVariable Long id, @RequestBody CategoryDTO categoryDTO);
 
     @DeleteMapping("/{id}")
-    ResponseEntity<CategoryDTO> deleteCategory(@PathVariable Long id, @RequestBody CategoryDTO categoryDTO);
+    ResponseEntity<Void> deleteCategory(@PathVariable Long id, @RequestBody CategoryDTO categoryDTO);
 
 }
