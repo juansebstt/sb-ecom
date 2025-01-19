@@ -37,7 +37,7 @@ public class AdminCategoryServiceImpl implements AdminCategoryService {
     }
 
     @Override
-    public Void deleteCategory(CategoryDTO deleteCategory) {
+    public Void deleteCategory() {
         return null;
     }
 }
