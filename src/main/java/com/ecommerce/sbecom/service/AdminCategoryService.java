@@ -8,7 +8,7 @@ public interface AdminCategoryService {
 
     CategoryDTO updateCategory(CategoryDTO updateCategory);
 
-    Void deleteCategory(CategoryDTO deleteCategory);
+    Void deleteCategory();
 
 
 }
