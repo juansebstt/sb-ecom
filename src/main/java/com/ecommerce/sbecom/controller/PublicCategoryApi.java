@@ -13,6 +13,7 @@ import java.util.List;
 @RequestMapping(ApiPathConstant.V1_ROUTE + ApiPathConstant.PUBLIC_ROUTE + ApiPathConstant.CATEGORIES_ROUTE)
 public interface PublicCategoryApi {
 
+    // Placeholder for handling GET requests to retrieve all categories with pagination and sorting
     @GetMapping
     ResponseEntity<List<CategoryModel>> getAllCategories(@RequestBody CategoriesDTO pageNumber,
                      @RequestBody CategoriesDTO pageSize,
