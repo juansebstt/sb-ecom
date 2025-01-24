@@ -21,6 +21,7 @@ public class PublicCategoryServiceImpl implements PublicCategoryService {
     @Override
     public List<CategoriesDTO> getAllCategories() {
 
+        // Placeholder for fetching and processing categories
         var categories = categoryRepository.findAll()
                 .stream()
                 .filter(category -> category.getCategoryName() != null)
