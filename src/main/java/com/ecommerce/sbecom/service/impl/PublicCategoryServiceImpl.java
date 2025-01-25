@@ -35,5 +35,6 @@ public class PublicCategoryServiceImpl implements PublicCategoryService {
                         .sortBy(category.getSortBy())
                         .build())
                 .toList();
+
     }
 }
