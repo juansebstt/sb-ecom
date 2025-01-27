@@ -31,12 +31,22 @@ public class AdminCategoryServiceImpl implements AdminCategoryService {
                 .build();
     }
 
-    @Override
-    public CategoryDTO updateCategory(CategoryDTO updateCategory) {
-        return null;
-    }
 
     @Override
+    public CategoryDTO updateCategory(CategoryDTO updateCategory) {
+        var categoryModel = categoryRepository.findById(updateCategory.getId())
+                .orElseThrow(() -> new RuntimeException("Category not found"));
+
+        categoryModel.setCategoryName(updateCategory.getCategoryName());
+        var updated = categoryRepository.save(categoryModel);
+
+        return CategoryDTO.builder()
+                .id(updated.getId())
+                .categoryName(updated.getCategoryName())
+                .build();
+    }
+
+        @Override
     public Void deleteCategory() {
         return null;
     }
