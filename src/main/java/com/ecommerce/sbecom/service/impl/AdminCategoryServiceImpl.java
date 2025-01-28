@@ -46,8 +46,10 @@ public class AdminCategoryServiceImpl implements AdminCategoryService {
                 .build();
     }
 
-        @Override
-    public Void deleteCategory() {
-        return null;
+    @Override
+    public void deleteCategory(Long categoryId) {
+        var categoryModel = categoryRepository.findById(categoryId)
+                .orElseThrow(() -> new RuntimeException("Category not found"));
+        categoryRepository.delete(categoryModel);
     }
 }
