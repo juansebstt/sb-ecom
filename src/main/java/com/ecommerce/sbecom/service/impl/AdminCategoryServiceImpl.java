@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
+// Service implementation for managing categories by admin
 @Service
 public class AdminCategoryServiceImpl implements AdminCategoryService {
 
