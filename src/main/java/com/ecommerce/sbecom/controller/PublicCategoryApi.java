@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
 
+// Public API for handling category requests
 @RequestMapping(ApiPathConstant.V1_ROUTE + ApiPathConstant.PUBLIC_ROUTE + ApiPathConstant.CATEGORIES_ROUTE)
 public interface PublicCategoryApi {
 
